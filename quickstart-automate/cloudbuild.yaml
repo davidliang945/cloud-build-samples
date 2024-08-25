@@ -14,7 +14,7 @@
 
 # [START cloudbuild_quickstart_automate]
 steps:
-  - name: golang
+  - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'gcr.io/prisma-o/quickstart-image', '.' ]
 logsBucket: gs://log-9801
 # [END cloudbuild_quickstart_automate]
