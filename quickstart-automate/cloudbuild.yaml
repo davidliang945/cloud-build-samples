@@ -15,6 +15,6 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: golang
-    args: ['go', 'run', 'quickstart-automate/main.go']
+    args: [ 'build', '-t', 'gcr.io/prisma-o/quickstart-image', '.' ]
 logsBucket: gs://log-9801
 # [END cloudbuild_quickstart_automate]
