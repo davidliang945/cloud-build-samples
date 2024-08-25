@@ -20,4 +20,5 @@ steps:
   automapSubstitutions: true
 images:
 - 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1'
+logsBucket: gs://log-9801
 # [END cloudbuild_quickstart_build]
