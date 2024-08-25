@@ -16,5 +16,5 @@
 steps:
   - name: golang
     args: ['go', 'run', 'quickstart-automate/main.go']
-logsBucket: gs://log-9801
+logging: CLOUD_LOGGING_ONLY
 # [END cloudbuild_quickstart_automate]
