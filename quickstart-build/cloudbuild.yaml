@@ -22,7 +22,7 @@
 #- 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1'
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '.' ]
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '-f', './Dockerfile', '.' ]
 images:
 - 'gcr.io/$PROJECT_ID/quickstart-image'
 logsBucket: gs://log-9801
