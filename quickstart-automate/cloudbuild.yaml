@@ -13,8 +13,15 @@
 # limitations under the License.
 
 # [START cloudbuild_quickstart_automate]
-steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/prisma-o/quickstart-image', '.' ]
-logsBucket: gs://log-9801
+#steps:
+#  - name: 'gcr.io/cloud-builders/docker'
+#    args: [ 'build', '-t', 'gcr.io/prisma-o/quickstart-image', '.' ]
+
 # [END cloudbuild_quickstart_automate]
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'asia-east1-docker.pkg.dev/$PROJECT_ID/gcr.io/my-image', '.' ]
+images:
+- 'asia-east1-docker.pkg.dev/$PROJECT_ID/gcr.io/my-image'
+logsBucket: gs://log-9801
